@@ -16,6 +16,8 @@ npm i bitcoinfees-insight
 
 ### recommended
 
+* code
+
 ```
 var bitcoinfees = require('bitcoinfees-insight');
 bitcoinfees.FeesApi.recommended().then(function(res){
@@ -23,9 +25,20 @@ bitcoinfees.FeesApi.recommended().then(function(res){
 })
 ```
 
+* result
+
 ```
 { "fastestFee": 40, "halfHourFee": 20, "hourFee": 10 }
 ```
+
+* mapping estimatefee
+
+```
+ "fastestFee": Math.round(nbBlocks=2 * 1.05)
+ "halfHourFee": Math.round(nbBlocks=2)
+ "hourFee": Math.round(nbBlocks=3)
+```
+
 
 ## HTTP Error Handling
 
