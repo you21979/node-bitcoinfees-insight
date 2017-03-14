@@ -83,6 +83,14 @@ bitcoinfees.FeesApi.recommended().then(function(res){
 })
 ```
 
+## Change Insight URL
+
+```
+var bitcoinfees = require('bitcoinfees-insight');
+bitcoinfees.Constant.API_BASE_URL = "https://www.localbitcoinschain.com/api";
+bitcoinfees.FeesApi.recommended()
+```
+
 ## memo
 
 It is better to store it in the database when using it on the server
